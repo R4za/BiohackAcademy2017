@@ -1,4 +1,8 @@
-## Welcome to GitHub Pages
+## Welcome to my project loghbook.
+
+We've not actually started our projects yet, but this page is still full of helpful markup language tips!
+
+~Raza
 
 You can use the [editor on GitHub](https://github.com/R4za/BiohackAcademy2017/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
