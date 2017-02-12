@@ -1,4 +1,4 @@
-## Welcome to my project loghbook.
+## Welcome to my project logbook.
 
 We've not actually started our projects yet, but this page is still full of helpful markup language tips!
 
