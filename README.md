@@ -3,10 +3,17 @@
 
 One of my main objectives this BHA is to build most of the devices, and this tuesday I finally completed my first: the magnetic stirrer. It started out easy enough, with quickly getting the fan/stirring function running and setting up the remainder of the circuit with the exception of the heating pad:
 
-![Getting started](https://github.com/R4za/BiohackAcademy2017/blob/master/IMG_20170213_170949.jpg?raw=true) Getting started.
-![Image](https://github.com/R4za/BiohackAcademy2017/blob/master/IMG_20170215_153653.jpg?raw=true) The circuit minus the heating pad
-![Image](https://github.com/R4za/BiohackAcademy2017/blob/master/IMG_20170215_162102.jpg?raw=true) Cardboard scaffolding for the magnets
-![Image](https://github.com/R4za/BiohackAcademy2017/blob/master/IMG_20170216_170936.jpg?raw=true) Whirlpool!
+![Getting started](https://github.com/R4za/BiohackAcademy2017/blob/master/IMG_20170213_170949.jpg?raw=true) 
+Getting started.
+
+![Image](https://github.com/R4za/BiohackAcademy2017/blob/master/IMG_20170215_153653.jpg?raw=true) 
+The circuit minus the heating pad.
+
+![Image](https://github.com/R4za/BiohackAcademy2017/blob/master/IMG_20170215_162102.jpg?raw=true) 
+Cardboard scaffolding to hold the magnets in place while the glue dries.
+
+![Image](https://github.com/R4za/BiohackAcademy2017/blob/master/IMG_20170216_170936.jpg?raw=true) 
+Whirlpool!
 
 Victory! Right? Not quite. Because when the heating pad eventually _was_ attached, it turned out not to do any heating! Also, two minutes into trying to figure _that_ out, the red LED stopped working. After spending a lab session or two testing the circuit and double-checking every connection, wherein everything seemed to function as it should, I finally thought to do something I should've done form the start: _do the math_! 
 
