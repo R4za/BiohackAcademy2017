@@ -1,5 +1,46 @@
 
-### 24-02-2017 - Debugging the Magnetic Stirrer.
+## 17-03-2017 - Project: Spirulina Plus
+
+Spirulina (_Arthrospira platensis_, in this case) is a cyanobacterium (but usually called an algae) that can be cultivated as a food source. It has several attractive properties in this regard: 
+- It's a complete protein source, meaning it provides every amino acid we need. This is pretty rare in a single food. It's dried mass is also about 60% protein, so it adds up.
+- About a third of this protein (20% of the dried mass) consists of phycocyanobilin proteins, which are bioactive and provide far-ranging and well-researched health benefits. Spirulina has been noted to be neuroprotective, improve cardiovascular health, boost the immune system, help excrete toxic levels of heavy metals and protect stem cell populations. Through it's inhibition of the endogenous free radical-producing NADPH oxidase enzyme it even has a promising mechanism for human life extension. There's too much to go into here, but feast your brain on [spirulina's examine.com review](https://examine.com/supplements/spirulina/) if you're interested.
+- It requires only light (which is potentially renewable), CO2 (which we have too much of) and a suitable nitrogen source and some minerals to grow. Growing it is _very nearly_ conjuring food out of thin air. It has this in common with plant foods in general, of course, but it's often cited as being particularly efficient at it.
+- Single-cellural organisms are highly unlikely to posses consciousness, so subjugating it to our needs seems ethically unproblematic. It's also vegan/vegetarian, if those are your criteria. This is all the more valuable in the light of the 'complete protein source' point.
+- Spirulina proteins are fluorescent green under the right lighting, and an indoor bioreactor will make your labspace look like a comic-book supervillain lair:
+<br> 
+
+ ![A spirulina reactor from blablaLab in Spain](https://github.com/R4za/BiohackAcademy2017/blob/master/Pics/spirulianreactor.png?raw=true){: .center-image }
+
+<br>
+This seems to me a good start. One of the takeaways of the BHA lectures so far seems to be that you can get microorganisms to do all sorts of neat tricks if you prod them right - but while I appreciate the art of animations built from face-shaped yeast cultures and the innovation of making clothes from laser-cut combucha film, most projects that I've seen are still some distance removed from being _useful_ when compared to conventional approaches to the same problem. Which is fine for art/learning/whenever you're having a good time, of course. But there are important things happening in the world in our era, ready to be affected by our actions, and so I personally really _like_ useful. Working on a food source that is _already_ very much worth eating/growing, any success would be immediately useful for me personally, and any _improvents_ I succeeded in making could be valuable for any current spirulina-farmer willing to adopt the method - hence this choice of project.
+
+The Spirulina Plus project aims to: a) get a healthy spirulina culture growing in a DIY bioreactor, and b) explore the possibility of genetically engineering _Arthrospira platensis_ to further improve its utility as a conveniently culturable health food.
+<br>
+
+### Subproject A: Building the Photobioreactor and Starting a Spirulina Culture.
+
+Four afternoons into the effort, building and improving on the [Waag-design open photobioreactor](https://github.com/BioHackAcademy/BHA_Photobioreactor) currently remains a work-in-progress. Further documentation probably to be added later.
+<br>
+
+### Subproject B: Genetic Engineering of _A. platensis_.
+
+**What?** The idea here is to add genetic material to living spirulina, which would then be used to start a culture posessing the corresponding properties in its phenotype. This would be useful for a couple of reasons. Because they do best at a pH as high as 9-9.5 (which few environmental microbes like) and because other algea that could thrive in the same growing conditions are scarce inside our homes, indoor spirulina cultures don't seem to be particularly difficult to keep uncontaminated. So once you've got _any_ succesfully modified spirulina, so long you go about it right, you'll have as much as fits in your reactor and you can replenish that supply indefinitely. And spirulina is pretty rare among prokaryotes in that it constitutes a _food_ of and by itself - taking genetically modified live probiotic supplements risks releasing GMA organisms into the environment, but spirulina you can just eat dead, and still benefit from whatever properties you added.
+
+Ideas for useful genetic improvements would be: 
+- Anything that enhances its growth rate/biomass productivity.
+- Anything that enhances its resistance to whatever-factors-could-theoretically-threaten-a-spirulina-harvest. Contamination by toxic blue algea seems like a thing for outdoor cultures, so something that'd give them a competitive advantage against those would be good.
+- Anything that expands the range of conditions that spirulina thrives at. For example, spirulina prefers 35 degrees C; if it could be changed to tolerate colder climates, the number of countries worldwide for which outdoor spirulina culturing is a viable food production strategy would increase by a lot) 
+- Changing its valuable new (phyto)nutrients. For example, brocolli has a reputation for its potent anti-cancer bioactives, but is unimpressive as a protein source and more difficult to grow than spirulina. If spirulina could be made to produce brocolli's bioactives, you'd have two health foods in one! With an optimized transfection method and accumulating genetic engineering practice, this could actually snowball into something like a _self-replenishing synthbio soylent-alternative_: you just keep adding food properties to one artificial phylogenic spirulina branch until you've packed it with everything you want and need, and then you grow as much as you can eat in your garden or garage from plant food and a light source. You'd have the simplicity, self-sufficiency and sustainability of your eating habits maxed out all at once! I know what I'll be eating after the apocalypse (did I mention spirulina reputedly protects against radiation poisoning?).
+- Having it produce _more_ of something valuable it already produces, such as the active phycocyaninbilin protein fragment.
+
+As a spoiled western biohacker who has never faced food-scarcity in his life, I get the most excited about the last two options. Currently, I'm leaning towards trying to make it (over)express [PQQ](https://examine.com/supplements/pyrroloquinoline-quinone/) (which is a fairly healthy, fairly expensive food supplement, which [scientists have succesfully added to other bacteria before](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0164860)) as a proof-of-concept, if I get that far. A more ambitious project still would be hacking spirulina to overproduce nicotinamide mononucleotide (NMN), an intermediate in the biosynthesis of an important energy metabolism co-factor from vitamin B3 that we all already produce. NMN has powerful life-extending properties when supplemented beyond our natural production, but is ridiculously expensive to buy or synthesize normally (I've found that a team at the Boston Open Source Laboratory is in fact already working on achieving NMN overproduction in lactobacillus, and have emailed the contact person to ask about their progress!).
+
+**How?**
+
+
+<br>
+
+## 24-02-2017 - Debugging the Magnetic Stirrer.
 
 One of my main objectives this BHA is to build most of the devices, and this tuesday I finally completed my first: the magnetic stirrer. It started out easy enough, with quickly getting the fan/stirring function running and setting up the remainder of the circuit with the exception of the heating pad:
 
