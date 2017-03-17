@@ -16,7 +16,7 @@ This seems to me a good start. One of the takeaways of the BHA lectures so far s
 
 The Spirulina Plus project aims to: a) get a healthy spirulina culture growing in a DIY bioreactor, and b) explore the possibility of genetically engineering _Arthrospira platensis_ to further improve its utility as a conveniently culturable health food.
 <br>
-
+<br>
 ### Subproject A: Building the Photobioreactor and Starting a Spirulina Culture.
 
 Four afternoons into the effort, building and improving on the [Waag-design open photobioreactor](https://github.com/BioHackAcademy/BHA_Photobioreactor) currently remains a work-in-progress. Further documentation probably to be added later.
@@ -43,12 +43,12 @@ Reading [the first of these papers](http://www.nature.com/articles/srep25666) an
 
 I also still need to work out the legality of this. CRISPR is apparently not included in the Waag society's genetic-modification licence, on account of it being a two-step process where you first make your organism express the CRISPR proteins (Cas9) which subsequently make it susceptible to further genetic editing - that is from memory of talking to Pieter, and may be poorly remembered.
 <br>
-
+<br>
 That's it up until now!
 
 ~ Raza
 <br>
-
+<br>
 ## 24-02-2017 - Debugging the Magnetic Stirrer.
 
 One of my main objectives this BHA is to build most of the devices, and this tuesday I finally completed my first: the magnetic stirrer. It started out easy enough, with quickly getting the fan/stirring function running and setting up the remainder of the circuit with the exception of the heating pad:
@@ -83,15 +83,15 @@ That did the trick, and my stirrer heats up (and stirs) beautifully now.
 
 ~Raza
 
-
-
+<br>
+<br>
 ### 12-02-2017 - Welcome to my project logbook.
 
 We've not actually started our projects yet, but this page is still full of helpful markup language tips!
 
 ~Raza
-
-
+<br>
+<br>
 
 
 You can use the [editor on GitHub](https://github.com/R4za/BiohackAcademy2017/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
