@@ -18,13 +18,11 @@ The air pump provided a challenge, as well. Waag society had some pumps lying ar
 Finally, the heating pad was tricky, as well. It drew too much current to be fed from the arduino 5V pin: trying this caused the LEDS and LCD screen to dim down and stop working. Feeding it from the 3.3V pin seemed to avoid this, and still created enough heat for my purposes. The arduino was getting suspiciously hot, though.
 
 This is the prototype in the final stages of getting put together:
-![Finalizing the device's guts](https://github.com/R4za/BiohackAcademy2017/blob/master/Pics/BHA_photobioreactor_WIP.jpg)
+![image](https://github.com/R4za/BiohackAcademy2017/blob/master/Pics/BHA_photobioreactor_WIP.jpg)
 
-<br>
 And here it is up and running, on the windowstil of the Waag biolab:
-![Completed, up and running](https://github.com/R4za/BiohackAcademy2017/blob/master/Pics/BHA_photobioreactor_prototype.jpg)
+![image](https://github.com/R4za/BiohackAcademy2017/blob/master/Pics/BHA_photobioreactor_prototype.jpg)
 
-<br>
 When the device seemed ready for use, I made some [medium](https://biohackacademy.github.io/bha3/annex/cultivation-media/spirulina-medium/) and added some of Waag's spirulina stock, and left the project over the five-day weekend between BHA classes.
 
 <br>
