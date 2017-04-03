@@ -1,4 +1,45 @@
 
+## 17-04-2017 - DIY Photobioreactor Update
+
+The first fully working prototype of my photobioreactor has come and gone!
+
+Building on the work in [Pieter's photobioreactor repository](https://github.com/BioHackAcademy/BHA_Photobioreactor), this device used an air pump to provide the CO2 that spirulina needs for photosynthesis, as well as a light sensor, heating pad, LED strip, LCD screen and thermometer hooked up to an arduino to:
+- Keep the reactor's temperature around spirulina's ideal growing value (35°C)
+- Turn the lights on and off to mimic the day-night cyclus that spirulina grows best under
+- Measure the density of spirulina in its medium through the amount of light that passes from the leds to the sensor, which is on the other end of the reactor, so that you know when you can harvest or move up to a bigger reactor.
+- Display all these values for easy reference
+
+Pieter's design also included a pH-meter, but reading up on the documentation for [the part he was using](https://www.dfrobot.com/product-1025.html#.UliSrGOS201), this meter wasn't actually considered suitable for continuous measurements. A [more expensive industrial sensor that _can_ do continuous measurement](https://www.dfrobot.com/product-1110.html) is available for the same chip (and could thus easily be substituted), but is apparently expected to last for a year at most, which makes the addition too expensive for my price point. I decided to use a cheap manual pH meter whenever the medium was changed, instead.
+
+I had trouble getting the LCD working. After trying things for an hour or two, it turned out that the I2C address in the arduino code (both that from the BHA repository as the one provided by the vendor where I bought the LCD screen) were wrong. Running [this sketch](http://playground.arduino.cc/Main/I2cScanner) detected the address where my screen actually announced itself, and inserting that into the code got the screen working. The real I2C address for my screen is 0x3F.
+
+The air pump provided a challenge, as well. Waag society had some pumps lying around for this project, but these were battery-powered (1.5V), and from their experience the batteries for these lasted only about half a day. I wanted my pump to run on the same power line feeding the rest of the device, which turned out to be very tricky. Arduino doesn't provide 1.5V, and neither did any of our available power supply units. I ended up adding a few heat-tolerant resistors, in parallel with each other and in series with the motor, which dropped the voltage down from 3.5V to 2.1V whenever the motor was running. However, it turns out that the impedance over an electromotor _increases_ when it is running, creating a bi-stable system: When the motor isn't running, it's lower impedance means that a lower proportion of the circuit's total voltage goes to the motor (as opposed to the resistors), leaving too little voltage to start the motor up. When the motor _is_ running, it draws a larger proportion of the total voltage, and consequently it _stays_ running. Add to that that the resistors tended to heat up (I burned through a few of them before finding a set of relatively heat-proof ones), and that the impedance over _them_ tends to _increase_ when they heat up or wear down from being heated for a while, and the end result was a very unstable system that took a lot of effort to get running for any length of time. Although the motor was working steadily when I finished this prototype, using resistors to create the necessary voltage drop for a device like this is clearly not a good way to go about it.
+
+Finally, the heating pad was tricky, as well. It drew too much current to be fed from the arduino 5V pin: trying this caused the LEDS and LCD screen to dim down and stop working. Feeding it from the 3.3V pin seemed to avoid this, and still created enough heat for my purposes. The arduino was getting suspiciously hot, though.
+
+This is the prototype in the final stages of getting put together:
+![Finalizing the device's guts](https://github.com/R4za/BiohackAcademy2017/blob/master/Pics/BHA_photobioreactor_WIP.jpg)
+
+<br>
+And here it is up and running, on the windowstil of the Waag biolab:
+![Completed, up and running](https://github.com/R4za/BiohackAcademy2017/blob/master/Pics/BHA_photobioreactor_prototype.jpg)
+
+<br>
+When the device seemed ready for use, I made some [medium](https://biohackacademy.github.io/bha3/annex/cultivation-media/spirulina-medium/) and added some of Waag's spirulina stock, and left the project over the five-day weekend between BHA classes.
+
+<br>
+### Results:
+
+When I came back, the air pump's motor had stopped and the reactor was room temperature, although the lights were on and the LCD screen was working. There were pale beige blots floating in the medium, looking very much like microorganisms but not at all like spirulina.
+
+Turns out the voltage-drop hack I used on the air pump had survived for about three days before failing, which was probably due to the resistors heating up and increasing their impedance to the point where the pump was no longer getting enough voltage to run. Putting a higher voltage on it would make it run again, although presumably not for very long. 
+
+Similarly, the power supply from the arduino 3.3V pin to the heating pad seemed to have failed; the arduino worked fine and still produced 3.3V there, but no longer enough current to get the heating pad to heat. It _did_ appear to have stopped overheating, though, so I'm guessing that the heating pad (which has a very low impedance) drew more current than the arduino could sustainably supply, gradually damaging its overheating 3.3V supply until it no longer produced enough current to heat the pad _or_ further damage the arduino.
+
+The lesson that I'm drawing from this is that I should feed my devices the kind of power they ask for even if it requires buying new parts, instead of something that they just barely seem capable of running on but which I can provide them with parts I happen to have lying around. For future models, I intend to buy a grid-powered air pump, and either set the heating pad up with its own power supply unit or just buy a ready-made aquarium thermostat. Pieter helpfully added that you could run the LEDs on a 24-hour timer socket instead of an arduino, which would mean that with the pH meter already gone and using a store-bought thermostat, you could get rid of the arduino and screen entirely. It'd probably be cheaper that way, too, if not quite as much fun.
+
+<br>
+<br>
 ## 17-03-2017 - Project: Spirulina Plus
 
 Spirulina (_Arthrospira platensis_, in this case) is a cyanobacterium (but usually referred to as an algae) that can be cultivated as a food source. It has several attractive properties in this regard: 
