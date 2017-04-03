@@ -24,7 +24,7 @@ And here it is up and running, on the windowstil of the Waag biolab:
 ![image](https://github.com/R4za/BiohackAcademy2017/blob/master/Pics/BHA_photobioreactor_prototype.jpg)
 
 When the device seemed ready for use, I made some [medium](https://biohackacademy.github.io/bha3/annex/cultivation-media/spirulina-medium/) and added some of Waag's spirulina stock, and left the project over the five-day weekend between BHA classes.
-
+<br>
 <br>
 ### Results:
 
