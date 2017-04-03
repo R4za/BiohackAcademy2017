@@ -18,10 +18,10 @@ The air pump provided a challenge, as well. Waag society had some pumps lying ar
 Finally, the heating pad was tricky, as well. It drew too much current to be fed from the arduino 5V pin: trying this caused the LEDS and LCD screen to dim down and stop working. Feeding it from the 3.3V pin seemed to avoid this, and still created enough heat for my purposes. The arduino was getting suspiciously hot, though.
 
 This is the prototype in the final stages of getting put together:
-![image](https://github.com/R4za/BiohackAcademy2017/blob/master/Pics/BHA_photobioreactor_WIP.jpg) 
+ ![image](http://github.com/R4za/BiohackAcademy2017/blob/master/Pics/BHA_photobioreactor_WIP.jpg) 
 
 And here it is up and running, on the windowstil of the Waag biolab:
-![image](https://github.com/R4za/BiohackAcademy2017/blob/master/Pics/BHA_photobioreactor_prototype.jpg) 
+ ![image](http://github.com/R4za/BiohackAcademy2017/blob/master/Pics/BHA_photobioreactor_prototype.jpg) 
 
 When the device seemed ready for use, I made some [medium](https://biohackacademy.github.io/bha3/annex/cultivation-media/spirulina-medium/) and added some of Waag's spirulina stock, and left the project over the five-day weekend between BHA classes.
 
@@ -112,7 +112,7 @@ Looking at the heating pad sub-circuit, there was 12 volt divided over a 6.5Ω/5
 
 Turns out there was... well, not so much an _error_ as an unfortunate display problem with the fritzing schematic:
 
-![Image](https://github.com/R4za/BiohackAcademy2017/blob/master/stirrerschematic.png)
+![Image](http://github.com/R4za/BiohackAcademy2017/blob/master/stirrerschematic.png)
  	
 In the left image, which was the fritzing file I was working with, it is apparent that the right-hand loop (which feeds the heating bad) feeds back _through_ the led onto the ground. Made sense to me: this way, the LED would light up regardless of whether the stirring or heating function was turned on - that is, whenever the device was running at all. But looking at the right side image, the heating pad's ground line turned out not to _connect_ to the line feeding the LED so much as it _displayed exactly overneath it_. Pulling it downwards a bit showed how the circuit was _supposed_ to be wired.
 
